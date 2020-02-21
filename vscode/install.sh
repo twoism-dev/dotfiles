@@ -1,5 +1,5 @@
 #!/bin/sh
-if test "$(which code)"; then
+if command -v code >/dev/null; then
 	if [ "$(uname -s)" = "Darwin" ]; then
 		VSCODE_HOME="$HOME/Library/Application Support/Code"
 	else
@@ -11,28 +11,7 @@ if test "$(which code)"; then
 	ln -sf "$DOTFILES/vscode/keybindings.json" "$VSCODE_HOME/User/keybindings.json"
 	ln -sf "$DOTFILES/vscode/snippets" "$VSCODE_HOME/User/snippets"
 
-	# from `code --list-extensions`
-	modules="
-be5invis.toml
-caarlos0.language-prometheus
-CoenraadS.bracket-pair-colorizer
-coolbear.systemd-unit-file
-EditorConfig.EditorConfig
-HookyQR.beautify
-mauve.terraform
-monokai.theme-monokai-pro-vscode
-ms-python.python
-ms-vscode.Go
-patbenatar.advanced-new-file
-PeterJausovec.vscode-docker
-pnp.polacode
-rebornix.ruby
-rust-lang.rust
-shanoor.vscode-nginx
-sourcegraph.sourcegraph
-timonwong.shellcheck
-"
-	for module in $modules; do
+	while read -r module; do
 		code --install-extension "$module" || true
-	done
+	done <"$DOTFILES/vscode/extensions.txt"
 fi

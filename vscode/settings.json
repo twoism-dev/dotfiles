@@ -1,5 +1,6 @@
 {
   "editor.fontSize": 15,
+  "editor.formatOnSave": true,
   "editor.rulers": [
     80,
     120
@@ -10,16 +11,15 @@
   "explorer.openEditors.visible": 0,
   "window.restoreWindows": "none",
   "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.fontSize": 14,
   "files.autoSave": "onFocusChange",
   "extensions.autoUpdate": true,
-  "workbench.iconTheme": "Monokai Pro Monochrome Icons",
-  "editor.cursorStyle": "line",
-  "editor.cursorBlinking": "solid",
+  "editor.cursorBlinking": "phase",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "files.trimTrailingWhitespace": true,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "none",
-  "workbench.colorTheme": "Monokai Pro",
+  "workbench.colorTheme": "Dracula",
   "window.zoomLevel": 0,
   "extensions.ignoreRecommendations": false,
   "go.coverageDecorator": {
@@ -31,31 +31,50 @@
     "/vendor": true
   },
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.fontAliasing": "antialiased",
-  "editor.fontWeight": "300",
-  "docker.showExplorer": false,
+  "workbench.fontAliasing": "auto",
   "workbench.editor.showIcons": true,
-  "go.testOnSave": false,
-  "go.coverOnSave": false,
   "explorer.confirmDragAndDrop": false,
   "search.smartCase": true,
-  "editor.fontFamily": "FuraCode Nerd Font Mono Retina, Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontLigatures": true,
-  "bracketPairColorizer.showVerticalScopeLine": false,
-  "bracketPairColorizer.showHorizontalScopeLine": false,
   "files.associations": {
     "*.tmpl": "gotemplate"
   },
-  "go.lintTool": "golint",
   "go.testTimeout": "3m",
   "breadcrumbs.enabled": true,
-  "go.useLanguageServer": false,
-  "go.enableCodeLens": {
-    "runtest": true
-  },
   "telemetry.enableTelemetry": false,
   "terraform.telemetry.enabled": false,
+  "terraform.indexing.enabled": false,
+  "terraform.languageServer.enabled": true,
   "telemetry.enableCrashReporter": false,
-  "monokaiPro.fileIconsMonochrome": true,
-  "go.useCodeSnippetsOnFunctionSuggest": true
+  "go.useCodeSnippetsOnFunctionSuggest": true,
+  "go.formatTool": "goimports",
+  "search.useGlobalIgnoreFiles": true,
+  "workbench.editor.highlightModifiedTabs": true,
+  "search.showLineNumbers": true,
+  "ruby.intellisense": "rubyLocate",
+  "ruby.format": "rubocop",
+  "ruby.codeCompletion": "rcodetools",
+  "ruby.useLanguageServer": true,
+  "go.autocompleteUnimportedPackages": true,
+  "editor.fontWeight": "600",
+  "terminal.integrated.cursorBlinking": true,
+  "go.coverOnSingleTest": true,
+  "terminal.integrated.cursorStyle": "line",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "go.useLanguageServer": false,
+  "go.alternateTools": {
+    "go-langserver": "gopls"
+  },
+  "go.languageServerExperimentalFeatures": {
+    "format": true,
+    "autoComplete": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "window.newWindowDimensions": "maximized",
+  "go.buildFlags": [
+    "-v"
+  ],
+  "editor.fontFamily": "Hack, 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
+  "editor.smoothScrolling": true
 }
