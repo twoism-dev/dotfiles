@@ -123,9 +123,6 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 echo "  › Set sidebar icon size to small"
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
-echo "  › Show status bar"
-defaults write com.apple.finder ShowStatusBar -bool true
-
 echo "  › Show path bar"
 defaults write com.apple.finder ShowPathbar -bool true
 
